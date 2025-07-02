@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Azure Crown Hotel - Luxury Boutique Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h2>The Azure Crown</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#booking" class="cta-btn">Book Now</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Experience Luxury Redefined</h1>
+            <p class="hero-subtitle">Welcome to The Azure Crown Hotel, where elegance meets comfort in the heart of the city</p>
+            <div class="hero-buttons">
+              <button class="btn-primary" onclick="scrollToBooking()">Reserve Your Stay</button>
+              <button class="btn-secondary" onclick="scrollToSection('rooms')">Explore Rooms</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-image-container">
+              <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury Hotel Exterior" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Where Stories Begin</h2>
+              <p>Nestled in the vibrant heart of the city, The Azure Crown Hotel stands as a beacon of luxury and sophistication. Our boutique hotel combines timeless elegance with modern amenities, creating an unforgettable experience for discerning travelers.</p>
+              <p>From our meticulously designed suites to our world-class dining experiences, every detail has been crafted to exceed your expectations and create memories that last a lifetime.</p>
+              <div class="stats">
+                <div class="stat">
+                  <h3>150+</h3>
+                  <p>Luxury Rooms</p>
+                </div>
+                <div class="stat">
+                  <h3>24/7</h3>
+                  <p>Concierge Service</p>
+                </div>
+                <div class="stat">
+                  <h3>5★</h3>
+                  <p>Guest Rating</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hotel Lobby" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rooms Section -->
+      <section id="rooms" class="rooms">
+        <div class="container">
+          <h2 class="section-title">Exquisite Accommodations</h2>
+          <p class="section-subtitle">Choose from our carefully curated selection of luxury rooms and suites</p>
+          
+          <div class="rooms-grid">
+            <div class="room-card" data-room="deluxe">
+              <div class="room-image">
+                <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Deluxe Room" />
+              </div>
+              <div class="room-info">
+                <h3>Deluxe Room</h3>
+                <p>Elegantly appointed with city views, premium amenities, and luxurious comfort for the perfect getaway.</p>
+                <div class="room-features">
+                  <span>32 sqm</span>
+                  <span>City View</span>
+                  <span>King Bed</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">$299</span>
+                  <span class="per-night">per night</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card" data-room="suite">
+              <div class="room-image">
+                <img src="https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Executive Suite" />
+              </div>
+              <div class="room-info">
+                <h3>Executive Suite</h3>
+                <p>Spacious luxury with separate living area, panoramic views, and exclusive access to executive lounge.</p>
+                <div class="room-features">
+                  <span>65 sqm</span>
+                  <span>Panoramic View</span>
+                  <span>Living Area</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">$599</span>
+                  <span class="per-night">per night</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card" data-room="presidential">
+              <div class="room-image">
+                <img src="https://images.pexels.com/photos/6758773/pexels-photo-6758773.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Presidential Suite" />
+              </div>
+              <div class="room-info">
+                <h3>Presidential Suite</h3>
+                <p>The pinnacle of luxury featuring a private terrace, butler service, and bespoke amenities.</p>
+                <div class="room-features">
+                  <span>120 sqm</span>
+                  <span>Private Terrace</span>
+                  <span>Butler Service</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">$1,299</span>
+                  <span class="per-night">per night</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Amenities Section -->
+      <section id="amenities" class="amenities">
+        <div class="container">
+          <h2 class="section-title">World-Class Amenities</h2>
+          <p class="section-subtitle">Indulge in our exceptional facilities designed for your comfort and pleasure</p>
+          
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <div class="amenity-icon">🏊‍♂️</div>
+              <h3>Infinity Pool</h3>
+              <p>Relax in our stunning rooftop infinity pool with breathtaking city views and premium poolside service.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🧘‍♀️</div>
+              <h3>Spa & Wellness</h3>
+              <p>Rejuvenate at our award-winning spa featuring signature treatments and state-of-the-art facilities.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🍽️</div>
+              <h3>Fine Dining</h3>
+              <p>Experience culinary excellence at our Michelin-starred restaurant with innovative cuisine and wine pairings.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">💼</div>
+              <h3>Business Center</h3>
+              <p>Conduct business seamlessly with our fully equipped meeting rooms and conference facilities.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🚗</div>
+              <h3>Valet Service</h3>
+              <p>Enjoy complimentary valet parking and luxury transportation services throughout the city.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🎵</div>
+              <h3>Entertainment</h3>
+              <p>Unwind at our sophisticated lounge bar featuring live jazz performances and craft cocktails.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2 class="section-title">Glimpse of Excellence</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Restaurant" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Pool" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Spa" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Bar" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/6758773/pexels-photo-6758773.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Exterior Night" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">Guest Experiences</h2>
+          <div class="testimonials-carousel">
+            <div class="testimonial active">
+              <div class="testimonial-content">
+                <p>"An absolutely magnificent experience. The Azure Crown exceeded every expectation with impeccable service and breathtaking accommodations."</p>
+                <div class="testimonial-author">
+                  <h4>Sarah Johnson</h4>
+                  <span>Travel Enthusiast</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>"The epitome of luxury and sophistication. From the moment we arrived, we were treated like royalty. Truly unforgettable."</p>
+                <div class="testimonial-author">
+                  <h4>Michael Chen</h4>
+                  <span>Business Executive</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>"Perfect for our anniversary celebration. The attention to detail and personalized service made our stay magical."</p>
+                <div class="testimonial-author">
+                  <h4>Emma & David Wilson</h4>
+                  <span>Celebrating Anniversary</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="prev-btn" onclick="changeTestimonial(-1)">‹</button>
+            <button class="next-btn" onclick="changeTestimonial(1)">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking Section -->
+      <section id="booking" class="booking">
+        <div class="container">
+          <div class="booking-content">
+            <div class="booking-info">
+              <h2>Reserve Your Stay</h2>
+              <p>Experience luxury at The Azure Crown Hotel. Book directly with us for the best rates and exclusive benefits.</p>
+              <div class="booking-benefits">
+                <div class="benefit">
+                  <span class="benefit-icon">✓</span>
+                  <span>Best Rate Guarantee</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">✓</span>
+                  <span>Complimentary WiFi</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">✓</span>
+                  <span>Free Cancellation</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">✓</span>
+                  <span>Exclusive Member Perks</span>
+                </div>
+              </div>
+            </div>
+            <div class="booking-form">
+              <form id="reservationForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests" required>
+                      <option value="1">1 Guest</option>
+                      <option value="2" selected>2 Guests</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="rooms">Rooms</label>
+                    <select id="rooms" name="rooms" required>
+                      <option value="1" selected>1 Room</option>
+                      <option value="2">2 Rooms</option>
+                      <option value="3">3 Rooms</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="room-type">Room Type</label>
+                  <select id="room-type" name="room-type" required>
+                    <option value="deluxe">Deluxe Room - $299/night</option>
+                    <option value="suite">Executive Suite - $599/night</option>
+                    <option value="presidential">Presidential Suite - $1,299/night</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-primary full-width">Check Availability</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Get in Touch</h2>
+              <p>We're here to make your stay exceptional. Contact us for reservations, inquiries, or special requests.</p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <h4>Address</h4>
+                  <p>123 Luxury Boulevard<br>Metropolitan District<br>New York, NY 10001</p>
+                </div>
+                <div class="contact-item">
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                  <h4>Email</h4>
+                  <p>reservations@azurecrown.com</p>
+                </div>
+                <div class="contact-item">
+                  <h4>Reception Hours</h4>
+                  <p>24/7 Concierge Service</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>The Azure Crown</h3>
+            <p>Where luxury meets comfort in the heart of the city. Experience exceptional hospitality and create unforgettable memories.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#rooms">Rooms & Suites</a></li>
+              <li><a href="#amenities">Amenities</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Concierge</a></li>
+              <li><a href="#">Room Service</a></li>
+              <li><a href="#">Spa & Wellness</a></li>
+              <li><a href="#">Event Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="LinkedIn">💼</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 The Azure Crown Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
