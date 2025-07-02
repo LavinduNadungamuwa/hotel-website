@@ -116,6 +116,37 @@ setInterval(() => {
   changeTestimonial(1);
 }, 5000);
 
+// Auto-advance testimonials every 6 seconds
+let testimonialInterval;
+function startTestimonialAutoAdvance() {
+  clearInterval(testimonialInterval);
+  testimonialInterval = setInterval(() => {
+    changeTestimonial(1);
+  }, 6000);
+}
+
+// Modified changeTestimonial to restart auto-advance on manual switch
+function changeTestimonial(direction) {
+  const testimonials = document.querySelectorAll('.testimonials-carousel .testimonial');
+  let current = Array.from(testimonials).findIndex(t => t.classList.contains('active'));
+  testimonials[current].classList.remove('active');
+  testimonials[current].style.display = 'none';
+  let next = (current + direction + testimonials.length) % testimonials.length;
+  testimonials[next].classList.add('active');
+  testimonials[next].style.display = 'flex';
+  startTestimonialAutoAdvance();
+}
+
+// On page load, show only the first testimonial and start auto-advance
+window.addEventListener('DOMContentLoaded', () => {
+  const testimonials = document.querySelectorAll('.testimonials-carousel .testimonial');
+  testimonials.forEach((t, i) => {
+    t.classList.toggle('active', i === 0);
+    t.style.display = i === 0 ? 'flex' : 'none';
+  });
+  startTestimonialAutoAdvance();
+});
+
 // Smooth scroll functions
 function scrollToSection(sectionId) {
   const element = document.getElementById(sectionId);

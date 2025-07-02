@@ -213,7 +213,7 @@
               <img src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Bar" />
             </div>
             <div class="gallery-item">
-              <img src="https://images.pexels.com/photos/6758773/pexels-photo-6758773.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite" />
+              <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Infinity Pool" />
             </div>
             <div class="gallery-item">
               <img src="https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Exterior Night" />
@@ -227,37 +227,39 @@
         <div class="container">
           <h2 class="section-title">Guest Experiences</h2>
           <div class="testimonials-carousel">
-            <div class="testimonial active">
-              <div class="testimonial-content">
+            <div class="testimonial active" style="display: flex; align-items: center; justify-content: center; max-width: 700px; width: 100%; min-width: 350px; margin: 0 auto;">
+              <button class="arrow-btn prev-btn" onclick="changeTestimonial(-1)">‹</button>
+              <div class="testimonial-content" style="flex: 1 1 0%; padding: 0 2rem; text-align: center;">
                 <p>"An absolutely magnificent experience. The Azure Crown exceeded every expectation with impeccable service and breathtaking accommodations."</p>
                 <div class="testimonial-author">
                   <h4>Sarah Johnson</h4>
                   <span>Travel Enthusiast</span>
                 </div>
               </div>
+              <button class="arrow-btn next-btn" onclick="changeTestimonial(1)">›</button>
             </div>
-            <div class="testimonial">
-              <div class="testimonial-content">
+            <div class="testimonial" style="display: none; align-items: center; justify-content: center; max-width: 700px; width: 100%; min-width: 350px; margin: 0 auto;">
+              <button class="arrow-btn prev-btn" onclick="changeTestimonial(-1)">‹</button>
+              <div class="testimonial-content" style="flex: 1 1 0%; padding: 0 2rem; text-align: center;">
                 <p>"The epitome of luxury and sophistication. From the moment we arrived, we were treated like royalty. Truly unforgettable."</p>
                 <div class="testimonial-author">
                   <h4>Michael Chen</h4>
                   <span>Business Executive</span>
                 </div>
               </div>
+              <button class="arrow-btn next-btn" onclick="changeTestimonial(1)">›</button>
             </div>
-            <div class="testimonial">
-              <div class="testimonial-content">
+            <div class="testimonial" style="display: none; align-items: center; justify-content: center; max-width: 700px; width: 100%; min-width: 350px; margin: 0 auto;">
+              <button class="arrow-btn prev-btn" onclick="changeTestimonial(-1)">‹</button>
+              <div class="testimonial-content" style="flex: 1 1 0%; padding: 0 2rem; text-align: center;">
                 <p>"Perfect for our anniversary celebration. The attention to detail and personalized service made our stay magical."</p>
                 <div class="testimonial-author">
                   <h4>Emma & David Wilson</h4>
                   <span>Celebrating Anniversary</span>
                 </div>
               </div>
+              <button class="arrow-btn next-btn" onclick="changeTestimonial(1)">›</button>
             </div>
-          </div>
-          <div class="testimonial-controls">
-            <button class="prev-btn" onclick="changeTestimonial(-1)">‹</button>
-            <button class="next-btn" onclick="changeTestimonial(1)">›</button>
           </div>
         </div>
       </section>
