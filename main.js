@@ -17,16 +17,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Navbar background on scroll
-  window.addEventListener('scroll', function() {
+  // Navbar background on scroll (theme-aware)
+  function updateNavbarBackground() {
     const navbar = document.querySelector('.navbar');
-    
+    const isDark = document.body.classList.contains('dark-mode');
     if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+      navbar.style.background = isDark
+        ? 'rgba(35, 39, 47, 0.98)' // var(--background-light) in dark mode
+        : 'rgba(255, 255, 255, 0.98)';
     } else {
-      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+      navbar.style.background = isDark
+        ? 'rgba(35, 39, 47, 0.95)'
+        : 'rgba(255, 255, 255, 0.95)';
     }
-  });
+  }
+  window.addEventListener('scroll', updateNavbarBackground);
+
+  // Also update navbar background when theme changes
+  const themeObserver = new MutationObserver(updateNavbarBackground);
+  themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
   // Set minimum dates for booking form
   const today = new Date().toISOString().split('T')[0];
@@ -284,8 +293,35 @@ function showNotification(message, type = 'info') {
 window.addEventListener('load', function() {
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.5s ease';
-  
   setTimeout(() => {
     document.body.style.opacity = '1';
   }, 100);
 });
+
+// Theme toggle logic
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+
+function setTheme(mode) {
+  if (mode === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (themeIcon) themeIcon.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>';
+  } else {
+    document.body.classList.remove('dark-mode');
+    if (themeIcon) themeIcon.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>';
+  }
+}
+
+function getPreferredTheme() {
+  return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', function() {
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    setTheme(isDark ? 'dark' : 'light');
+  });
+  // Set initial theme
+  setTheme(getPreferredTheme());
+}
