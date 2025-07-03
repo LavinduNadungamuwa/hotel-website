@@ -788,6 +788,10 @@ body.dark-mode .testimonials {
   z-index: 1;
 }
 
+body.dark-mode .testimonials .section-title {
+  color: var(--text-dark);
+}
+
 .testimonials-carousel {
   position: relative;
   max-width: 900px;
@@ -825,6 +829,12 @@ body.dark-mode .testimonials {
   transform: scale(1.08);
 }
 
+body.dark-mode .prev-btn, body.dark-mode .next-btn {
+  background: rgba(255,255,255,0.10);
+  border: 2px solid rgba(255,255,255,0.18);
+  color: var(--text-dark);
+}
+
 /* Testimonial card with black shadow */
 .testimonial {
   display: block;
@@ -843,6 +853,7 @@ body.dark-mode .testimonial {
   background: rgba(35,39,47,0.22);
   border: 1.5px solid rgba(122,183,255,0.10);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.32);
+  color: #e3e9f7;
 }
 
 .testimonial:not(.active) {
