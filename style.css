@@ -323,7 +323,7 @@ body.dark-mode .cta-btn {
   right: 0;
   bottom: 0;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.05"/><circle cx="100" cy="100" r="60" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.1"/><circle cx="100" cy="100" r="40" stroke="%233f51b5" stroke-width="0.5" fill="none" opacity="0.175"/></svg>');
+    url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.03"/><circle cx="100" cy="100" r="60" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.04"/><circle cx="100" cy="100" r="40" stroke="%233f51b5" stroke-width="0.5" fill="none" opacity="0.03"/></svg>');
   background-size: 400px 400px;
   background-position: -100px -100px;
   animation: heroPattern 25s linear infinite;
