@@ -281,6 +281,39 @@ body.dark-mode .nav-menu a {
   color: var(--text-light);
 }
 
+.nav-menu a.active {
+  position: relative;
+  color: var(--text-dark); /* Always black in light mode */
+  font-weight: 600;
+}
+body.dark-mode .nav-menu a.active {
+  color: var(--secondary-color);
+}
+.nav-menu a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--secondary-color);
+  opacity: 0.85;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.nav-menu .cta-btn.active,
+.nav-menu .cta-btn:active {
+  /* Remove highlight from Book Now button */
+  color: var(--text-dark) !important;
+  background: var(--secondary-color) !important;
+}
+body.dark-mode .nav-menu .cta-btn.active,
+body.dark-mode .nav-menu .cta-btn:active {
+  color: #23272f !important;
+  background: var(--secondary-color) !important;
+}
+
 .cta-btn {
   background: var(--secondary-color) !important;
   color: var(--text-dark) !important;
@@ -336,7 +369,7 @@ body.dark-mode .cta-btn {
   right: 0;
   bottom: 0;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.03"/><circle cx="100" cy="100" r="60" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.04"/><circle cx="100" cy="100" r="40" stroke="%233f51b5" stroke-width="0.5" fill="none" opacity="0.03"/></svg>');
+    url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.2"/><circle cx="100" cy="100" r="60" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.15"/><circle cx="100" cy="100" r="40" stroke="%233f51b5" stroke-width="0.5" fill="none" opacity="0.25"/></svg>');
   background-size: 400px 400px;
   background-position: -100px -100px;
   animation: heroPattern 25s linear infinite;
@@ -703,7 +736,7 @@ body.dark-mode .cta-btn {
   right: 0;
   bottom: 0;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M75 25 L100 50 L125 75 L100 100 L75 125 L50 100 L25 75 L50 50 Z" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.02"/></svg>');
+    url('data:image/svg+xml;utf8,<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M75 25 L100 50 L125 75 L100 100 L75 125 L50 100 L25 75 L50 50 Z" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
   background-size: 300px 300px;
   background-position: 0 0;
   animation: galleryPattern 35s linear infinite;
@@ -754,7 +787,7 @@ body.dark-mode .cta-btn {
   background: linear-gradient(120deg, rgba(26,35,126,0.92) 0%, rgba(122,183,255,0.88) 100%);
   /* Enhanced geometric SVG pattern as background texture */
   background-image:
-    url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="60" height="60" fill="none"/><circle cx="30" cy="30" r="28" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.08"/><circle cx="30" cy="30" r="18" stroke="%23ffffff" stroke-width="0.5" fill="none" opacity="0.10"/><circle cx="30" cy="30" r="8" stroke="%233f51b5" stroke-width="0.5" fill="none" opacity="0.10"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="60" height="60" fill="none"/><circle cx="30" cy="30" r="28" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.08"/><circle cx="30" cy="30" r="18" stroke="%23ffffff" stroke-width="0.5" fill="none" opacity="0.10"/><circle cx="30" cy="30" r="8" stroke="%234f5b93" stroke-width="0.5" fill="none" opacity="0.10"/></svg>'),
     linear-gradient(120deg, rgba(26,35,126,0.92) 0%, rgba(122,183,255,0.88) 100%);
   background-size: 100px 100px, cover;
   background-repeat: repeat, no-repeat;
@@ -1027,7 +1060,7 @@ body.dark-mode .testimonial.active {
   right: 0;
   bottom: 0;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L90 50 L50 90 L10 50 Z" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.03"/></svg>');
+    url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L90 50 L50 90 L10 50 Z" stroke="%23ffd700" stroke-width="0.5" fill="none" opacity="0.037"/></svg>');
   background-size: 200px 200px;
   background-position: 100px 100px;
   animation: contactPattern 28s ease-in-out infinite;
@@ -1106,7 +1139,7 @@ body.dark-mode .testimonial.active {
   right: 0;
   bottom: 0;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="25" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.02"/></svg>');
+    url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="25" stroke="%231a237e" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
   background-size: 160px 160px;
   background-position: 0 0;
   animation: footerPattern 18s linear infinite;

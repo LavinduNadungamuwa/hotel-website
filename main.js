@@ -87,6 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// --- Scrollspy for nav link highlighting ---
+document.addEventListener('DOMContentLoaded', function() {
+  // Scrollspy logic
+  const navLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]:not(.cta-btn)'));
+  const sectionIds = navLinks.map(link => link.getAttribute('href').replace('#', ''));
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  function highlightNavLink() {
+    let scrollPos = window.scrollY + 90; // Offset for fixed navbar
+    let activeIndex = 0;
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= scrollPos) {
+        activeIndex = i;
+      }
+    }
+    navLinks.forEach((link, idx) => {
+      if (idx === activeIndex) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNavLink);
+  highlightNavLink();
+});
+
 // Testimonials carousel
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll('.testimonial');
