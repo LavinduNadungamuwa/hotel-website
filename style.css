@@ -300,6 +300,13 @@ body.dark-mode .cta-btn {
   transition: var(--transition);
 }
 
+/* Mobile controls container */
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -1201,6 +1208,11 @@ body.dark-mode .footer-bottom {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Show mobile controls container and hide desktop nav menu */
+  .mobile-controls {
+    display: flex;
+  }
+  
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -1216,6 +1228,11 @@ body.dark-mode .footer-bottom {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  /* Hide theme toggle from nav-menu on mobile */
+  .nav-menu .theme-toggle {
+    display: none;
   }
 
   .hamburger {
